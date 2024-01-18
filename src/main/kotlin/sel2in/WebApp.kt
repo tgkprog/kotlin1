@@ -8,9 +8,9 @@ import io.ktor.server.routing.*
 
 fun main() {
     var s = K1()
-        s.main()
+        s.sayIt()
 
-    s.main()
+    s.sayIt()
      var r =  Thread(){
          embeddedServer(Netty, port = 9703) {
              routing {
@@ -30,5 +30,5 @@ fun main() {
     }
     r.start()
     r.join()
-    s.main()
+    s.sayIt()
 }
